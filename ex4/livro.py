@@ -78,6 +78,21 @@ class Livro:
     def titulo_capitulo(self, titulo_capitulo):
         self.__titulo_capitulo = titulo_capitulo
 
+    @property
+    def autores(self):
+        return self.__autores
+
+    @autores.setter
+    def autores(self, autores):
+        self.__autores = autores
+
+    @property
+    def capitulos(self):
+        return self.__capitulos
+
+    @capitulos.setter
+    def capitulos(self, capitulos):
+        self.__capitulos = capitulos
     
 
     def incluir_autor(self, autor: Autor):
@@ -95,15 +110,17 @@ class Livro:
                 self.__autores.remove(autor)
 
     def incluir_capitulo(self, numero: int, titulo: str):
-        self.__capitulos.append(Capitulo(numero, titulo))
+        if (Capitulo(numero,titulo)) not in self.__capitulos:
+            self.__capitulos.append(Capitulo(numero, titulo))
         
-        ... #Nao permitir insercao de Capitulos duplicados!
+        #Nao permitir insercao de Capitulos duplicados!
 
     def excluir_capitulo(self, titulo: str):
-
-        ...
+        if (Capitulo(titulo)) in self.__capitulos:
+            self.__capitulos.remove(Capitulo(titulo))
 
     def find_capitulo_by_titulo(self, titulo: str):
+        if (Capitulo(titulo)) in self.__capitulos:
+            return Capitulo(titulo)
         # Procura na lista de capitulos se existe um Capitulo com este titulo 
         # Se encontrar, retorna o Capitulo encontrado
-        ...
