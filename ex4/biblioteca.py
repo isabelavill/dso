@@ -1,5 +1,6 @@
 from livro import Livro
-
+from editora import Editora
+from autor import Autor
 
 class Biblioteca:
     def __init__(self):
@@ -22,6 +23,8 @@ class Biblioteca:
     @property
     def livros(self):
         return self.__livros
-    
-l1=Livro(1,'HP',2002,editora,autor,2,'cap 2')
+
+e1=Editora(1,'Abril')
+a1=Autor(1,'JK Rowling')
+l1=Livro(1,'HP',2002,e1,a1,2,'cap 2')
 l1.incluir_autor()
