@@ -22,8 +22,8 @@ class UsuarioBU(ABC):
     
     @abstractmethod
     def emprestar(self, titulo_livro:str):
-        ...
+        pass
     
     @abstractmethod
     def devolver(self,titulo_livro: str):
-        ...
+        pass
