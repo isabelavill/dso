@@ -15,9 +15,9 @@ class Aluno(UsuarioBU):
     def matricula(self, matricula):
         self.__matricula=matricula
     
-
+    @abstractmethod
     def emprestar(self, titulo_livro:str):
-        return f'Aluno de matricula {self.__matricula} pegou emprestado o livro: {titulo_livro} com '
-    
+        return f'Aluno de matricula "{self.__matricula}" pegou emprestado o livro: {titulo_livro} com'
+    @abstractmethod
     def devolver(self,titulo_livro: str):
-        return f'Aluno de matricula {self.__matricula} devolveu o livro: {titulo_livro}'
+        return f'Aluno de matricula "{self.__matricula}" devolveu o livro: {titulo_livro}'

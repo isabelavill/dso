@@ -1,9 +1,9 @@
 from aluno import Aluno
 
 class AlunoPosGraduacao(Aluno):
-    def __init__(self, elaborando_tese: bool, cpf, dias_de_emprestimo, matricula):
+    def __init__(self, cpf, dias_de_emprestimo, matricula):
         super().__init__(cpf, dias_de_emprestimo, matricula)
-        self.__elaborando_tese= elaborando_tese
+        self.__elaborando_tese= False
     
     @property
     def elaborando_tese(self):
@@ -16,7 +16,7 @@ class AlunoPosGraduacao(Aluno):
         prazo=super().dias_de_emprestimo
         if self.__elaborando_tese==True:
             prazo=prazo*2
-        return f' {super().emprestar(titulo_livro)} {str(prazo)} dias de prazo'
+        return f'{super().emprestar(titulo_livro)} {str(prazo)} dias de prazo'
     
     def devolver(self,titulo_livro: str):
         return super().devolver(titulo_livro)
