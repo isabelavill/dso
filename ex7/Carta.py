@@ -1,5 +1,5 @@
 from AbstractCarta import *
-from Personagem import *
+from ex7.Personagem import *
 
 
 class Carta(AbstractCarta):

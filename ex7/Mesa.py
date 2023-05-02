@@ -1,5 +1,5 @@
 from AbstractMesa import *
-from Carta import *
+from ex7.Carta import *
 
 
 class Mesa(AbstractMesa):

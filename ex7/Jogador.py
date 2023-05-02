@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from Carta import *
+from ex7.Carta import *
 from AbstractJogador import *
 import random
 

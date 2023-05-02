@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
-from Carta import *
-from Personagem import *
-from Jogador import *
-from Mesa import *
+from ex7.Carta import *
+from ex7.Personagem import *
+from ex7.Jogador import *
+from ex7.Mesa import *
 
 
 class AbstractControladorJogo(ABC):

@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
-from Carta import *
-from Jogador import *
+from ex7.Carta import *
+from ex7.Jogador import *
 
 
 class AbstractMesa(ABC):

@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from Personagem import *
+from ex7.Personagem import *
 
 
 class AbstractCarta(ABC):
