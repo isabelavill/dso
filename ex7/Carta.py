@@ -12,7 +12,7 @@ class Carta(AbstractCarta):
     @return Retorna o somatorio de todos os atributos do personagem da Carta
     '''
     def valor_total_carta(self) -> int:
-        soma=self.__energia + self.__habilidade + self.__velocidade + self.__resistencia
+        soma=self.personagem.__energia + self.personagem.__habilidade + self.personagem.__velocidade + self.personagem.__resistencia
         return soma
     @property
     def personagem(self) -> Personagem:

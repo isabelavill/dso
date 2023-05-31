@@ -7,24 +7,34 @@ class Biblioteca:
         self.__livros = []
 
     def incluir_livro(self, livro: Livro):
-        if livro is not None and isinstance(livro,Livro):
+        if livro is not None and isinstance(livro, Livro):
             if livro not in self.__livros:
                 self.__livros.append(livro)
-      
-        # Nao esqueca de garantir que o objeto recebido pertence a classe Livro...
-        # Nao permitir insercao de Livros duplicados!
-        
 
     def excluir_livro(self, livro: Livro):
         if livro is not None and isinstance(livro, Livro):
             if livro in self.__livros:
                 self.__livros.remove(livro)
+    
+    def listar(self):
+        if len(self.__livros)==0:
+            print('Nennum livro cadastrado')
+        else:
+            for i in range(len(self.__livros)):
+                print(f'Livro {i+1}: {self.__livros[i].titulo}')
 
     @property
     def livros(self):
         return self.__livros
 
-e1=Editora(1,'Abril')
-a1=Autor(1,'JK Rowling')
-l1=Livro(1,'HP',2002,e1,a1,2,'cap 2')
-l1.incluir_autor()
+autor=Autor(1,'J.K. Rowling')
+editora=Editora(1,'Abril')
+livro1=Livro(1,'Harry Potter e A Câmara Secreta',2003,editora,autor,1,'Inicio')
+livro2=Livro(2,'Harry Potter e A Ordem da Fênix',2003,editora,autor,1,'Inicio')
+biblioteca=Biblioteca()
+biblioteca.incluir_livro(livro1)
+biblioteca.incluir_livro(livro2)
+biblioteca.listar()
+biblioteca.excluir_livro(livro1)
+biblioteca.excluir_livro(livro2)
+biblioteca.listar()

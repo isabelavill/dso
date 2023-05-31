@@ -1,7 +1,7 @@
 class CategoriaProduto:
-
-    def __init__(self, titulo):
-        self.__titulo = titulo
+    def __init__(self,titulo):
+        self.__titulo=titulo
+    
 
     @property
     def titulo(self):
